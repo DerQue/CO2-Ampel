@@ -14,18 +14,19 @@
 #define LEDS_COLOR_GOOD CRGB(0, 255, 0)
 
 #define NEW_GAUGE       // Farbgradient statt Punkte
-#define BLINK 1600      // wenn definiert: LED Blinken 2x in LEDS_COLOR_BAD; wenn dieser Wert überschritten
+#define BLINK 1300      // wenn definiert: LED Blinken 2x in LEDS_COLOR_BAD; wenn dieser Wert überschritten
 
 #define OK 1000
-#define BAD 2000
-#define SCALE 100
+#define BAD 1600
+#define SCALE 50
+#define OFFSET 300
 
 #define UPDATE_INTERVAL 2500
 
 #define SENSOR_SDA 21
 #define SENSOR_SCL 22
 
-//#define DISABLE_MQTT
+#define DISABLE_MQTT
 
 #define WIFI_SSID "SSID"
 #define WIFI_PASS "PASS"

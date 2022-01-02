@@ -61,15 +61,7 @@ void loop() {
 
   #ifdef BLINK
   if(sensor.getCo2() >= BLINK && !blink) {
-    led.drawRing(LEDS_COLOR_BAD);
-    delay(500);
-    led.drawRing(CRGB::Black);
-    delay(500);
-    led.drawRing(LEDS_COLOR_BAD);
-    delay(500);
-    led.drawRing(CRGB::Black);
-    delay(500);
-    led.drawGauge(sensor.getCo2());
+    led.blink(sensor.getCo2());
     blink = true;
     delay(UPDATE_INTERVAL - 2000);
   } else {
